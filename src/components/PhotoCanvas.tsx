@@ -59,10 +59,7 @@ const PhotoCanvas: React.FC<PhotoCanvasProps> = ({
         <CommentMarker 
           key={comment.id}
           comment={comment} 
-          onClick={(e) => {
-            e.stopPropagation();
-            onCommentClick(comment.id);
-          }}
+          onClick={() => onCommentClick(comment.id)}
           isActive={comment.id === activeCommentId}
         />
       ))}
